@@ -13,7 +13,7 @@
         
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(#f2a220, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             padding: 20px;
         }
@@ -28,7 +28,7 @@
         }
         
         .header {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            background: linear-gradient(#f2a220, #1e3c72 0%, #2a5298 100%);
             color: white;
             padding: 40px;
             text-align: center;
@@ -173,17 +173,21 @@
         }
         
         .table-container {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            border: 1px solid #e0e7ff;
-        }
+    		background: white;
+    		border-radius: 15px;
+    		overflow-x: auto;
+    		overflow-y: hidden;
+    		box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    		border: 1px solid #e0e7ff;
+    		width: 100%;
+	}
         
         table {
-            width: 100%;
-            border-collapse: collapse;
-        }
+    		width: 100%;
+    		border-collapse: collapse;
+    		min-width: 600px; /* prevents columns from collapsing too tightly */
+    		white-space: nowrap;
+	}
         
         th {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -300,7 +304,6 @@
             .container {
                 box-shadow: none;
                 border-radius: 0;
-                style="overflow-x:auto;"
             }
             
             .print-button {
@@ -417,15 +420,17 @@
                                 <th>Event Name/Activity</th>
                                 <th>Income</th>
                                 <th>Expense</th>
-                                <th>Expense from treasury</th>
+                                <th>Expense from Treasury</th>
+				<th>Date</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>Off Season-1</td>
+				<td>-</td>
                                 <td class="expense-amount">₹315.00</td>
+				<td class="expense-amount">₹315.00</td>
                                 <td>25/05/2025</td>
-                                <td>-</td>
                             </tr>
                             <tr>
                                 <td>AD for DRR from Home club</td>
@@ -484,6 +489,7 @@
                         </tbody>
                     </table>
                 </div>
+		</div>
             </div>
             
             <div class="section">
